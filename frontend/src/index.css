@@ -1,0 +1,143 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body {
+  background: #1b1b1b;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  position: relative; /* Allows absolute positioning inside */
+ 
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: flex-end; /* Moves content to the bottom */
+  
+  background-image: url('../public/images/NavbarImage.jpg');
+  height: 270px;
+  background-size: cover;
+  background-position: center top -270px;
+  
+}
+header .container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: rgb(91, 165, 134); /* Bright white text */
+  background: linear-gradient(45deg, #313131, #646363); /* Stylish grayscale gradient */
+  padding: 3px 8px; /* Decreased spacing */
+  border-radius: 8px; /* Smooth edges */
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase; /* Makes text stand out */
+  letter-spacing: 1px; /* Improves readability */
+  box-shadow: 0 4px 4px rgba(54, 54, 54, 0.5); /* Soft shadow */
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+}
+
+header a:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  background: linear-gradient(45deg, #222, #666); /* Darker on hover */
+  box-shadow: 0 6px 15px rgba(68, 68, 68, 0.7);
+}
+
+
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* homepage */
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+}
+.workout-details {
+  background: #d4d3d3;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.workout-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #d4d3d3;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/*new workout form*/
+label,input{
+  display: block;
+  
+}
+.text{
+  color: var(--primary);
+  text-shadow: 2px 2px 5px rgba(100, 100, 99, 0.5); /* Soft glowing effect */
+}
+label{
+  color:#d4d3d3;
+}
+
+input{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button{
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+div.error{
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error{
+  border: 1px solid var(--error);
+}
