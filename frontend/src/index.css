@@ -7,51 +7,54 @@
   --error: #e7195a;
 }
 body {
-  background: #1b1b1b;
+  background: #D2B48C;
   margin: 0;
   font-family: "Poppins";
 }
 header {
-  position: relative; /* Allows absolute positioning inside */
- 
-  display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: flex-end; /* Moves content to the bottom */
-  
-  background-image: url('../public/images/NavbarImage.jpg');
-  height: 270px;
-  background-size: cover;
-  background-position: center top -270px;
-  
+  background-image: url('../public/images/NavbarImage.jpg'); /* Set the background image */
+  background-size: cover; /* Cover the entire header */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  width: 100%; /* Full width */
+  height: 60vh; /* Adjust height as needed */
+  display: flex; /* Optional: Use flex for centering content */
+  align-items: center; /* Align content vertically */
+  justify-content: center; /* Align content horizontally */
 }
+
 header .container {
   max-width: 700px;
   margin: 0 auto;
   padding: 5px 10px;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
 }
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
 header a {
-  color: rgb(91, 165, 134); /* Bright white text */
-  background: linear-gradient(45deg, #313131, #646363); /* Stylish grayscale gradient */
-  padding: 3px 8px; /* Decreased spacing */
-  border-radius: 8px; /* Smooth edges */
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase; /* Makes text stand out */
-  letter-spacing: 1px; /* Improves readability */
-  box-shadow: 0 4px 4px rgba(54, 54, 54, 0.5); /* Soft shadow */
-  transition: all 0.3s ease-in-out;
-  text-decoration: none;
-  text-align: center;
+    color: #2E6957; /* Deep green to match the leaves */
+    background: linear-gradient(45deg, #F4E1C6, #D2B48C); /* Warm beige & tan gradient */
+    padding: 5px 12px; /* Balanced spacing */
+    border-radius: 12px; /* Softer rounded edges */
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive; /* Elegant cursive font */
+    text-transform: capitalize; /* Softer than uppercase */
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(114, 85, 61, 0.4); /* Warm shadow */
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    text-align: center;
 }
 
 header a:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
-  background: linear-gradient(45deg, #222, #666); /* Darker on hover */
-  box-shadow: 0 6px 15px rgba(68, 68, 68, 0.7);
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #D2B48C, #A67B5B); /* Warmer earthy tones */
+    box-shadow: 0 6px 15px rgba(114, 85, 61, 0.6);
 }
+
 
 
 .pages{
@@ -61,39 +64,61 @@ header a:hover {
 }
 
 /* homepage */
+:root {
+  --primary: #2E6957; /* Deep green inspired by the leaves */
+  --background-light: #F8F6F2; /* Soft off-white for a clean look */
+  --accent-warm: #D2B48C; /* Warm tan for subtle highlights */
+  --text-dark: #5B4636; /* Earthy brown for contrast */
+  --shadow-light: rgba(114, 85, 61, 0.15); /* Soft brown shadow */
+}
+
 .home {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  gap: 80px; /* Slightly reduced gap for balance */
 }
+
 .workout-details {
-  background: #d4d3d3;
-  border-radius: 4px;
+  background: var(--background-light); /* Soft warm white */
+  border-radius: 12px; /* Softer rounded edges */
   margin: 20px auto;
-  padding: 20px;
+  padding: 24px;
   position: relative;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 4px 4px 10px var(--shadow-light); /* Warm, soft shadow */
+  border-left: 6px solid var(--primary); /* Elegant left border for emphasis */
 }
+
 .workout-details h4 {
-  margin: 0 0 10px 0;
-  font-size: 1.2em;
+  margin: 0 0 12px 0;
+  font-size: 1.3em;
   color: var(--primary);
+  font-family: 'Dancing Script', cursive; /* Stylish cursive */
 }
+
 .workout-details p {
   margin: 0;
-  font-size: 0.9em;
-  color: #555;
+  font-size: 1em;
+  color: var(--text-dark); /* Softer, earthy text color */
+  line-height: 1.5;
 }
+
 .workout-details span {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
-  background: #d4d3d3;
-  padding: 6px;
+  background: var(--accent-warm); /* Warm tan */
+  padding: 8px;
   border-radius: 50%;
-  color: #333;
+  color: var(--text-dark);
+  transition: background 0.3s ease-in-out;
 }
+
+.workout-details span:hover {
+  background: var(--primary); /* Turns deep green on hover */
+  color: #fff;
+}
+
 
 /*new workout form*/
 label,input{
@@ -102,10 +127,12 @@ label,input{
 }
 .text{
   color: var(--primary);
+  font-family: 'Dancing Script', cursive;
   text-shadow: 2px 2px 5px rgba(100, 100, 99, 0.5); /* Soft glowing effect */
 }
 label{
-  color:#d4d3d3;
+  color:#131212;
+  font-family: 'Dancing Script', cursive;
 }
 
 input{
